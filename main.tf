@@ -4,12 +4,8 @@
 
     terraform {
         backend "s3" {
-            bucket = "warmup-running-state"
-            key = "global/s3/terraform.tfstate"
-            region = "us-east-2"
-
+            key = "pailstore/terraform.tfstate"
             dynamodb_table = "warmup-running-locks"
-            encrypt = true
         }
     }
 
